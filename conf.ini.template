@@ -1,0 +1,9 @@
+[BASE_URL]
+qa_endpoint = https://gorest.co.in/public/v2/
+
+; This can be replaced with the production endpoint URL
+prod_endpoint =
+
+[auth]
+; Replace with your authentication access token
+token = your_access_token_here

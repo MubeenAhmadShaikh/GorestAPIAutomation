@@ -1,0 +1,121 @@
+2023-11-16 22:12:12,871 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:12,871 -[test_posts.py:48] - [test_create_new_post_positive] - [ERROR] - Test Failed: Response time exceeded: 2.2
+2023-11-16 22:12:13,934 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:13,934 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.4
+2023-11-16 22:12:13,934 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:15,480 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:15,480 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.4
+2023-11-16 22:12:15,496 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:17,108 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:17,108 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.5
+2023-11-16 22:12:17,124 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:18,717 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:18,717 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.4
+2023-11-16 22:12:18,733 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:20,264 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:20,264 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.4
+2023-11-16 22:12:20,264 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:22,560 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:22,560 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.8
+2023-11-16 22:12:22,560 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:23,607 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:23,607 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.4
+2023-11-16 22:12:23,607 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:25,091 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:25,091 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.5
+2023-11-16 22:12:25,091 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:26,668 -[test_posts.py:37] - [test_create_new_post_positive] - [INFO] - created new post successfully: status 201
+2023-11-16 22:12:26,668 -[test_posts.py:43] - [test_create_new_post_positive] - [INFO] - response time taken: 0.5
+2023-11-16 22:12:26,668 -[test_posts.py:46] - [test_create_new_post_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:31,418 -[test_posts.py:60] - [test_get_post_by_id_positive] - [INFO] - getting single post by id 85229 successfully
+2023-11-16 22:12:31,418 -[test_posts.py:63] - [test_get_post_by_id_positive] - [INFO] - validated post data successfully
+2023-11-16 22:12:31,839 -[test_posts.py:81] - [test_get_all_posts_positive] - [INFO] - getting all the posts successfully: status 200
+2023-11-16 22:12:33,058 -[test_posts.py:101] - [test_search_post_by_title_positive] - [INFO] - searched post by title varie successfully: status 200
+2023-11-16 22:12:33,058 -[test_posts.py:103] - [test_search_post_by_title_positive] - [INFO] - validated searched post successfully
+2023-11-16 22:12:35,245 -[test_posts.py:123] - [test_search_post_by_body_positive] - [INFO] - searched post by body trium successfully: status 200
+2023-11-16 22:12:35,245 -[test_posts.py:125] - [test_search_post_by_body_positive] - [INFO] - validated searched post successfully
+2023-11-16 22:12:39,713 -[test_posts.py:145] - [test_search_post_by_user_id_positive] - [INFO] - searched post by user_id 5714924 successfully: status 200
+2023-11-16 22:12:39,713 -[test_posts.py:147] - [test_search_post_by_user_id_positive] - [INFO] - validated searched post using user_id successfully
+2023-11-16 22:12:40,135 -[test_posts.py:167] - [test_pagination_positive] - [INFO] - searched using pagination parameters page 3 and per page 20 successfully: status 200
+2023-11-16 22:12:40,135 -[test_posts.py:170] - [test_pagination_positive] - [INFO] - validated page and its returned items length.
+2023-11-16 22:12:41,119 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:41,135 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:43,275 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:43,290 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:45,228 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:45,243 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:46,868 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:46,868 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:48,461 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:48,461 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:50,211 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:50,226 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:51,258 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:51,273 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:53,071 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:53,086 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:54,867 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:54,883 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:57,382 -[test_posts.py:196] - [test_update_post_positive] - [INFO] - updated existing post successfully: status 200
+2023-11-16 22:12:57,382 -[test_posts.py:203] - [test_update_post_positive] - [INFO] - validated updated body response
+2023-11-16 22:12:58,819 -[test_posts.py:216] - [test_delete_post_positive] - [INFO] - deleted existing post successfully: status 204
+2023-11-16 22:12:59,850 -[test_posts.py:239] - [test_create_new_post_negative] - [INFO] - [for unauthenticated user] Expected status code and messages are returned
+2023-11-16 22:13:00,663 -[test_posts.py:267] - [test_create_new_post_negative] - [INFO] - [for non-existent user_id 1] Expected status code and messages are returned 
+2023-11-16 22:13:01,100 -[test_posts.py:282] - [test_get_post_by_id_negative] - [INFO] - [for invalid post_id -123] Expected status code and messages are returned 
+2023-11-16 22:13:01,459 -[test_posts.py:282] - [test_get_post_by_id_negative] - [INFO] - [for invalid post_id %$#@!] Expected status code and messages are returned 
+2023-11-16 22:13:01,850 -[test_posts.py:282] - [test_get_post_by_id_negative] - [INFO] - [for invalid post_id  ] Expected status code and messages are returned 
+2023-11-16 22:13:02,865 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided: -123 per_page: -123
+2023-11-16 22:13:02,865 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page: -123 with type as <class 'int'>
+2023-11-16 22:13:03,272 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided: -123 per_page: -123
+2023-11-16 22:13:03,272 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page: -123 with type as <class 'int'>
+2023-11-16 22:13:03,631 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided: -123 per_page: -123
+2023-11-16 22:13:03,631 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page: -123 with type as <class 'int'>
+2023-11-16 22:13:04,068 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided: %$#@! per_page: %$#@!
+2023-11-16 22:13:04,068 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page: %$#@! with type as <class 'str'>
+2023-11-16 22:13:04,474 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided: %$#@! per_page: %$#@!
+2023-11-16 22:13:04,474 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page: %$#@! with type as <class 'str'>
+2023-11-16 22:13:04,865 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided: %$#@! per_page: %$#@!
+2023-11-16 22:13:04,865 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page: %$#@! with type as <class 'str'>
+2023-11-16 22:13:05,505 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided:   per_page:  
+2023-11-16 22:13:05,505 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page:   with type as <class 'str'>
+2023-11-16 22:13:05,990 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided:   per_page:  
+2023-11-16 22:13:05,990 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page:   with type as <class 'str'>
+2023-11-16 22:13:06,396 -[test_posts.py:306] - [test_pagination_negative] - [INFO] - Page provided:   per_page:  
+2023-11-16 22:13:06,396 -[test_posts.py:315] - [test_pagination_negative] - [ERROR] - Test Failed:  [intentionally failed]No error message returned for invalid page:   with type as <class 'str'>
+2023-11-16 22:13:08,443 -[test_posts.py:333] - [test_update_post_negative] - [INFO] - [for updating post with unauthenticated user] Expected status code and messages are returned
+2023-11-16 22:13:08,818 -[test_posts.py:349] - [test_update_post_negative] - [INFO] - [for updating with blank data] Expected status code and messages are returned
+2023-11-16 22:13:09,224 -[test_posts.py:365] - [test_update_post_negative] - [INFO] - [for updating post with invalid user_id] Expected status code and messages are returned
+2023-11-16 22:13:11,379 -[test_posts.py:380] - [test_delete_post_negative] - [INFO] - [for deleting post with unauthenticated user] Expected status code and messages are returned
+2023-11-16 22:13:11,801 -[test_posts.py:390] - [test_delete_post_negative] - [INFO] - [for deleting post with invalid user_id] Expected status code and messages are returned
+2023-11-16 22:13:14,004 -[test_posts.py:380] - [test_delete_post_negative] - [INFO] - [for deleting post with unauthenticated user] Expected status code and messages are returned
+2023-11-16 22:13:14,348 -[test_posts.py:390] - [test_delete_post_negative] - [INFO] - [for deleting post with invalid user_id] Expected status code and messages are returned
+2023-11-18 12:33:10,981 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:10,983 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.8
+2023-11-18 12:33:10,993 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:11,843 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:11,844 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.2
+2023-11-18 12:33:11,855 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:12,907 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:12,908 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.1
+2023-11-18 12:33:12,919 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:16,245 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:16,245 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.4
+2023-11-18 12:33:16,258 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:18,602 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:18,602 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.6
+2023-11-18 12:33:18,612 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:20,294 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:20,295 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.1
+2023-11-18 12:33:20,301 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:21,079 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:21,080 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.2
+2023-11-18 12:33:21,090 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:21,857 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:21,857 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.1
+2023-11-18 12:33:21,868 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:23,185 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:23,186 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.1
+2023-11-18 12:33:23,196 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
+2023-11-18 12:33:25,209 -[test_users.py:53] - [test_create_new_user_positive] - [INFO] - created new user successfully: status 201
+2023-11-18 12:33:25,210 -[test_users.py:59] - [test_create_new_user_positive] - [INFO] - response time taken: 0.5
+2023-11-18 12:33:25,223 -[test_users.py:63] - [test_create_new_user_positive] - [INFO] - validated user data successfully
