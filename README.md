@@ -75,6 +75,9 @@ allure generate path_to_directory_of_json_data
 ```
 - Video of allure interactive reports
 
+https://github.com/MubeenAhmadShaikh/GorestAPIAutomation/assets/81980180/a9675002-16fd-4e94-b758-f5a0300bb204
+
+
 ### Details of arguments
 
 | Parameter | Option     | Description                |
