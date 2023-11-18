@@ -1,0 +1,2 @@
+[32mINFO    [0m test_search_post_by_user_id_positive:test_posts.py:144 searched post by user_id 5716300 successfully: status 200
+[32mINFO    [0m test_search_post_by_user_id_positive:test_posts.py:146 validated searched post using user_id successfully

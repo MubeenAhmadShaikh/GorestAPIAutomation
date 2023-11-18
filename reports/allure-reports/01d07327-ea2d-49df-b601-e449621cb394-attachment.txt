@@ -1,0 +1,2 @@
+[32mINFO    [0m test_get_post_by_id_positive:test_posts.py:59 getting single post by id 85453 successfully
+[32mINFO    [0m test_get_post_by_id_positive:test_posts.py:62 validated post data successfully

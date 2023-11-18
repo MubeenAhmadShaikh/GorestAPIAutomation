@@ -1,0 +1,2 @@
+[32mINFO    [0m test_create_new_post_positive:test_posts.py:36 created new post successfully: status 201
+[31m[1mERROR   [0m test_create_new_post_positive:test_posts.py:47 Test Failed: Response time exceeded: 2.6

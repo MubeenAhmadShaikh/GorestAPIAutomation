@@ -1,0 +1,1 @@
+[32mINFO    [0m test_delete_user_positive:test_users.py:250 deleted existing user successfully: status 204

@@ -1,0 +1,3 @@
+[32mINFO    [0m test_create_new_post_positive:test_posts.py:36 created new post successfully: status 201
+[32mINFO    [0m test_create_new_post_positive:test_posts.py:42 response time taken: 0.9
+[32mINFO    [0m test_create_new_post_positive:test_posts.py:45 validated post data successfully

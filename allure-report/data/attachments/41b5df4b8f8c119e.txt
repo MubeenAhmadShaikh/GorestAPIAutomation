@@ -1,0 +1,4 @@
+[32mINFO    [0m test_update_user_negative:test_users.py:425 [for updating unauthenticated user] Expected status code and messages are returned
+[32mINFO    [0m test_update_user_negative:test_users.py:441 [for updating blank data] Expected status code and messages are returned
+[32mINFO    [0m test_update_user_negative:test_users.py:459 [for updating duplicate email aanjaneya_ahluwalia@morissette-shanahan.test] Expected status code and messages are returned
+[32mINFO    [0m test_update_user_negative:test_users.py:476 [for updating invalid gender and email] Expected status code and messages are returned

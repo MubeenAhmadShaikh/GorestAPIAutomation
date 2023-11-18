@@ -1,0 +1,3 @@
+[32mINFO    [0m test_create_new_user_positive:test_users.py:53 created new user successfully: status 201
+[32mINFO    [0m test_create_new_user_positive:test_users.py:59 response time taken: 0.3
+[32mINFO    [0m test_create_new_user_positive:test_users.py:63 validated user data successfully

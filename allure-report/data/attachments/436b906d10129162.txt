@@ -1,0 +1,2 @@
+[32mINFO    [0m test_search_user_pagination_negative:test_users.py:401 Page provided: %$#@! per_page: %$#@!
+[31m[1mERROR   [0m test_search_user_pagination_negative:test_users.py:408 Test Failed: [intentionally failed]No error message returned for invalid page: %$#@! with type as <class 'str'>

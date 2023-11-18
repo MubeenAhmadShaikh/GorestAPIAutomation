@@ -8,4 +8,4 @@ __pycache__
 venv
 
 # IDE-specific files
-.idea
+__idea__

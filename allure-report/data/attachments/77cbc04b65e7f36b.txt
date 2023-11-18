@@ -1,0 +1,4 @@
+[32mINFO    [0m test_get_user_by_id_positive:test_users.py:93 getting single user by id 5716300 successfully
+[32mINFO    [0m test_get_user_by_id_positive:test_users.py:95 validated user data successfully
+[32mINFO    [0m test_get_user_by_id_positive:test_users.py:98 validated Auth token successfully
+[32mINFO    [0m test_get_user_by_id_positive:test_users.py:101 response time taken: 0.6

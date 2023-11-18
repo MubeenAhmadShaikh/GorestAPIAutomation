@@ -1,0 +1,3 @@
+[32mINFO    [0m test_pagination_positive:test_posts.py:166 searched using pagination parameters page 3 and per page 20 successfully: status 200
+[32mINFO    [0m test_pagination_positive:test_posts.py:169 validated page and its returned items length.
+[31m[1mERROR   [0m test_pagination_positive:test_posts.py:176 Test Failed: Response time exceeded: 1.1

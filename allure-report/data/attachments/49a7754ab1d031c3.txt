@@ -1,0 +1,2 @@
+[32mINFO    [0m test_search_post_by_body_positive:test_posts.py:122 searched post by body careo successfully: status 200
+[32mINFO    [0m test_search_post_by_body_positive:test_posts.py:124 validated searched post successfully

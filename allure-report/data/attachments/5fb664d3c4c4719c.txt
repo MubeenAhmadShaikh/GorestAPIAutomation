@@ -1,0 +1,1 @@
+[32mINFO    [0m test_get_user_by_id_negative:test_users.py:359 [for invalid user_id -123] Expected status code and messages are returned

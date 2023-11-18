@@ -1,0 +1,1 @@
+[32mINFO    [0m test_get_post_by_id_negative:test_posts.py:281 [for invalid post_id %$#@!] Expected status code and messages are returned

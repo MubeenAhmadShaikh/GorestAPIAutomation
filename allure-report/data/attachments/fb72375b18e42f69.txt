@@ -1,0 +1,1 @@
+[32mINFO    [0m test_get_all_posts_positive:test_posts.py:80 getting all the posts successfully: status 200

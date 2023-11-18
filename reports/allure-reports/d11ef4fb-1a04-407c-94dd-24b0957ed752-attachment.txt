@@ -1,0 +1,2 @@
+[32mINFO    [0m test_update_user_positive:test_users.py:225 updated existing user successfully: status 200
+[32mINFO    [0m test_update_user_positive:test_users.py:233 validated updated body response

@@ -1,0 +1,2 @@
+[32mINFO    [0m test_update_post_positive:test_posts.py:195 updated existing post successfully: status 200
+[32mINFO    [0m test_update_post_positive:test_posts.py:202 validated updated body response

@@ -1,0 +1,6 @@
+[32mINFO    [0m test_pagination_negative:test_posts.py:305 Page provided: -123 per_page: -123
+[31m[1mERROR   [0m test_pagination_negative:test_posts.py:314 Test Failed:  [intentionally failed]No error message returned for invalid page: -123 with type as <class 'int'>
+[32mINFO    [0m test_pagination_negative:test_posts.py:305 Page provided: -123 per_page: -123
+[31m[1mERROR   [0m test_pagination_negative:test_posts.py:314 Test Failed:  [intentionally failed]No error message returned for invalid page: -123 with type as <class 'int'>
+[32mINFO    [0m test_pagination_negative:test_posts.py:305 Page provided: -123 per_page: -123
+[31m[1mERROR   [0m test_pagination_negative:test_posts.py:314 Test Failed:  [intentionally failed]No error message returned for invalid page: -123 with type as <class 'int'>
