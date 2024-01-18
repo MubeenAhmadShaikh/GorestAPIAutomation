@@ -77,8 +77,8 @@ class TestUsers(Base):
             users_validations.validate_response_body(user_data, data)
             logs.info("validated user data successfully")
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating new user positive {ae}")
+            pytest.fail(f"Test Failed for creating new user positive {ae}")
         finally:
             if response.status_code == 201:
                 self.delete_existing_user(response.json()['id'])
@@ -117,8 +117,8 @@ class TestUsers(Base):
             common_validations.validate_environment(response, "qa")
             common_validations.validate_single_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for getting user by id positive {ae}")
+            pytest.fail(f"Test Failed for getting user by id positive {ae}")
 
     @pytest.mark.positive
     @retry(stop_max_attempt_number=3)
@@ -147,8 +147,8 @@ class TestUsers(Base):
             common_validations.validate_environment(response, "qa")
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for getting all user positive {ae}")
+            pytest.fail(f"Test Failed for getting all user positive {ae}")
 
     @pytest.mark.positive
     @retry(stop_max_attempt_number=3)
@@ -170,8 +170,8 @@ class TestUsers(Base):
             common_validations.validate_environment(response, "qa")
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for searching user by name positive {ae}")
+            pytest.fail(f"Test Failed for searching user by name positive {ae}")
 
     @pytest.mark.positive
     @retry(stop_max_attempt_number=3)
@@ -193,8 +193,8 @@ class TestUsers(Base):
             common_validations.validate_response_time(response, 2.0)
             common_validations.validate_environment(response, "qa")
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for searching user by email positive {ae}")
+            pytest.fail(f"Test Failed for searching user by email positive {ae}")
 
     @pytest.mark.positive
     @retry(stop_max_attempt_number=3)
@@ -217,8 +217,8 @@ class TestUsers(Base):
             common_validations.validate_environment(response, "qa")
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for pagination positive {ae}")
+            pytest.fail(f"Test Failed for pagination positive {ae}")
 
     @pytest.mark.positive
     @retry(stop_max_attempt_number=3)
@@ -247,8 +247,8 @@ class TestUsers(Base):
             users_validations.validate_response_body(user_update_data, data)
             logs.info("validated updated body response")
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for updating user positive {ae}")
+            pytest.fail(f"Test Failed for updating user positive {ae}")
         finally:
             if response.status_code == 200:
                 self.delete_existing_user(user_id)
@@ -268,8 +268,8 @@ class TestUsers(Base):
             common_validations.validate_response_time(response, 2.0)
             common_validations.validate_environment(response, "qa")
         except AssertionError as ae:
-            logs.error(f"Test failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for deleting user positive {ae}")
+            pytest.fail(f"Test Failed for deleting user positive {ae}")
 
     # Negative Tests
 
@@ -306,8 +306,8 @@ class TestUsers(Base):
             common_validations.validate_unauthenticated_user_message(response)
             logs.info("[for unauthenticated user] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating user negative[Unauthenticated user] {ae}")
+            pytest.fail(f"Test Failed for creating user negative[Unauthenticated user] {ae}")
 
         # sending blank data validation
         try:
@@ -323,8 +323,8 @@ class TestUsers(Base):
             users_validations.validate_sending_blank_data(data)
             logs.info("[for blank data] Expected status code and messages are returned ")
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating user negative[Blank data] {ae}")
+            pytest.fail(f"Test Failed for creating user negative[Blank data] {ae}")
 
         # duplicate email validation
         random_user_response = self.get_a_random_user()
@@ -342,8 +342,8 @@ class TestUsers(Base):
             users_validations.validate_duplicate_email_message(data)
             logs.info("[for duplicate email] Expected status code and messages are returned ")
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating user negative[Duplicate email] {ae}")
+            pytest.fail(f"Test Failed for creating user negative[Duplicate email] {ae}")
 
         # invalid gender and email validation
         try:
@@ -359,8 +359,8 @@ class TestUsers(Base):
             users_validations.validate_invalid_gender_and_email(data)
             logs.info("[for invalid gender and email] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating user negative[Invalid gender or email] {ae}")
+            pytest.fail(f"Test Failed for creating user negative[Invalid gender or email] {ae}")
 
     @pytest.mark.negative
     @pytest.mark.parametrize('invalid_user_id', [-123, "%$#@!", " "])
@@ -373,8 +373,8 @@ class TestUsers(Base):
             common_validations.validate_resource_not_found_message(response)
             logs.info(f"[for invalid user_id {invalid_user_id}] Expected status code and messages are returned ")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for getting user by id negative {ae}")
+            pytest.fail(f"Test Failed for getting user by id negative {ae}")
 
     @pytest.mark.negative
     def test_search_users_by_name_negative(self):
@@ -388,8 +388,8 @@ class TestUsers(Base):
             users_validations.validate_empty_list_is_returned(data)
             logs.info("[for searching invalid name user_name] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for searching user by name negative {ae}")
+            pytest.fail(f"Test Failed for searching user by name negative {ae}")
 
     @pytest.mark.negative
     def test_search_users_by_email_negative(self):
@@ -403,8 +403,8 @@ class TestUsers(Base):
             users_validations.validate_empty_list_is_returned(data)
             logs.info(f"[for searching invalid email {user_email}] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for searching user by email negative {ae}")
+            pytest.fail(f"Test Failed for searching user by email negative {ae}")
 
     @pytest.mark.negative
     @pytest.mark.xfail
@@ -420,8 +420,8 @@ class TestUsers(Base):
             users_validations.validate_invalid_pagination(page, per_page)
             logs.info("Expected status code and messages are returned for searching invalid pagination parameters")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed during pagination negative {ae}")
+            pytest.fail(f"Test Failed during pagination negative {ae}")
 
     @pytest.mark.negative
     def test_update_user_negative(self):
@@ -439,8 +439,8 @@ class TestUsers(Base):
             common_validations.validate_unauthenticated_user_message(response)
             logs.info("[for updating unauthenticated user] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for updating user negative[Unauthenticated user] {ae}")
+            pytest.fail(f"Test Failed for updating user negative[Unauthenticated user] {ae}")
 
         # sending blank data validation
         try:
@@ -455,8 +455,8 @@ class TestUsers(Base):
             users_validations.validate_sending_blank_data(data)
             logs.info("[for updating blank data] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for updating user negative[Blank data] {ae}")
+            pytest.fail(f"Test Failed for updating user negative[Blank data] {ae}")
 
         # duplicate email validation
         try:
@@ -473,8 +473,8 @@ class TestUsers(Base):
             users_validations.validate_duplicate_email_message(data)
             logs.info(f"[for updating duplicate email {duplicate_email}] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for updating user negative[duplicate email] {ae}")
+            pytest.fail(f"Test Failed for updating user negative[duplicate email] {ae}")
 
         # invalid gender and email validation
         try:
@@ -490,8 +490,8 @@ class TestUsers(Base):
             users_validations.validate_invalid_gender_and_email(data)
             logs.info("[for updating invalid gender and email] Expected status code and messages are returned ")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for updating user negative[Invalid gender or email] {ae}")
+            pytest.fail(f"Test Failed for updating user negative[Invalid gender or email] {ae}")
 
     @pytest.mark.negative
     def test_delete_user_negative(self):
@@ -505,8 +505,8 @@ class TestUsers(Base):
             common_validations.validate_unauthenticated_user_message(response)
             logs.info("[for deleting unauthenticated user] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for deleting user negative[Unauthenticated user] {ae}")
+            pytest.fail(f"Test Failed for deleting user negative[Unauthenticated user] {ae}")
 
         # invalid user id
         try:
@@ -516,5 +516,5 @@ class TestUsers(Base):
             common_validations.validate_resource_not_found_message(response)
             logs.info("[for deleting with invalid user_id] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for deleting user negative[Invalid user_id] {ae}")
+            pytest.fail(f"Test Failed for deleting user negative[Invalid user_id] {ae}")

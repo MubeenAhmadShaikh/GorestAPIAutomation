@@ -43,4 +43,5 @@ RUN mkdir -p /gorestapiautomation/reports/gorestapi-report
 WORKDIR /gorestapiautomation/tests
 
 # Define the CMD command
-CMD ["sh", "-c", "if [ -n \"$TEST_FILE\" ]; then pytest $TEST_FILE -s -v ${MARKER_NAME:+-m $MARKER_NAME} --alluredir='../reports/allure-reports'; else pytest -s -v ${MARKER_NAME:+-m $MARKER_NAME} --alluredir='/gorestapiautomation/reports/allure-reports'; fi && allure generate '/gorestapiautomation/reports/allure-reports' -o '/gorestapiautomation/reports/generated-reports' && allure-combine '../reports/generated-reports' --dest '../reports/gorestapi-report'"]
+CMD ["sh", "-c", "if [ -n \"$TEST_FILE\" ]; then pytest $TEST_FILE -s -v ${MARKER_NAME:+-m $MARKER_NAME} --alluredir='/gorestapiautomation/reports/allure-reports'; else pytest -s -v ${MARKER_NAME:+-m $MARKER_NAME} --alluredir='/gorestapiautomation/reports/allure-reports'; fi ; allure generate '/gorestapiautomation/reports/allure-reports' -o '/gorestapiautomation/reports/generated-reports' ; allure-combine '/gorestapiautomation/reports/generated-reports' --dest '/gorestapiautomation/reports/gorestapi-report'"]
+

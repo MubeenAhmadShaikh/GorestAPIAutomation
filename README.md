@@ -3,14 +3,24 @@
 
 
 The Gorest API Automation project is an api testing framework that ensures the reliability and security of gorest APIs through a range of features. Gorest APIs are freely available APIs with Bearer access token and tons of features. The framework incorporates data-driven testing, positive/negative tests validation, and Pytest parameterizations for efficient test of multiple data. With logging and detailed reporting, it provides insights into test results. The project includes a retry mechanism for handling limited request failures and validates various aspects such as authentication,content-type, response time, pagination parameters, status codes, response structure, and response validation. Custom assertions enhance test coverage, making it a comprehensive framework for thorough API testing.
-## Points to know before running the project
+
+
+## Run using Docker Container
+
+- Docker containers makes it easy to run the tests in a specific environment where you do not have to install anything specifically. Just pull the image and run simple command to run the tests.
+- Image to use for this project [gorestapi-automation](https://hub.docker.com/r/mubeenahmadshaikh/gorestapi-automation)
+- All the instructions are given on docker image overview for running tests in container
+
+
+## Points to know before running the project locally
 - Signup to go rest for the access token https://gorest.co.in/
 - store the access token in `conf.ini` file in `token` variable
 - Access token is required for POST, PUT, PATCH and DELETE methods.
 - Created data with a particular access token will only be available for same user and not to the rest.
-- According to gorest we can access the GET request without Bearer token but the data created during tests won't be available to validate. Hence used Bearer token for GET requests also.
+- According to gorest we can access the GET request without Bearer token but the data created during tests won't be available to validate, Hence used Bearer token for GET requests also.
 - Data will be removed on daily basis.
 - Do check the website https://gorest.co.in for more details on `request-rate-limits` `pagination parameters` `status codes` `curl example for REST API`
+
 ## Run Locally 
 - Clone the Project
 ```bash
@@ -118,8 +128,8 @@ allure generate path_to_directory_of_json_data
 - Pytest
 - Requests library
 - Allure reports
-- Jenkins
+- Docker
 
 ## 🛠 Skills
 
-`Python` `Pytest` `Allure reports` `HTML reports` `Automation Testing` `API Testing`  `RESTapi`
+`Python` `Pytest` `Allure reports` `Docker` `HTML reports` `Automation Testing` `API Testing`  `RESTapi`

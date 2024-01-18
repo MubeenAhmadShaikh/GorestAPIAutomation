@@ -1,4 +1,3 @@
-# .gitignore
 conf.ini
 
 # Python-specific
@@ -8,4 +7,4 @@ __pycache__
 venv
 
 # IDE-specific files
-__idea__
+.idea

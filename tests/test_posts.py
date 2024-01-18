@@ -51,14 +51,14 @@ class TestPosts(Base):
             common_validations.validate_content_type(response)
             common_validations.validate_auth_token(response, access_token)
             common_validations.validate_response_is_a_dictionary(data)
-            common_validations.validate_response_time(response, 2.0)
+            common_validations.validate_response_time(response, 1)
             logs.info("response time taken: " + str(round(response.elapsed.total_seconds(), 1)))
             common_validations.validate_single_object_schema(data, expected_schema)
             posts_validations.validate_post_response_body(post_data, data)
             logs.info("validated post data successfully")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while creating new post {ae}")
+            pytest.fail(f"Test Failed while creating new post {ae}")
 
     @pytest.mark.positive
     def test_get_post_by_id_positive(self):
@@ -79,8 +79,8 @@ class TestPosts(Base):
             common_validations.validate_response_time(response, 2.0)
             common_validations.validate_single_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while getting post by id {ae}")
+            pytest.fail(f"Test Failed while getting post by id {ae}")
 
     @pytest.mark.positive
     def test_get_all_posts_positive(self):
@@ -97,8 +97,8 @@ class TestPosts(Base):
             common_validations.validate_response_time(response, 1.0)
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while getting all posts {ae}")
+            pytest.fail(f"Test Failed while getting all posts {ae}")
 
     @pytest.mark.positive
     def test_search_post_by_title_positive(self):
@@ -119,8 +119,8 @@ class TestPosts(Base):
             common_validations.validate_response_time(response, 1.0)
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while searching post by title positive {ae}")
+            pytest.fail(f"Test Failed while searching post by title positive {ae}")
 
     @pytest.mark.positive
     def test_search_post_by_body_positive(self):
@@ -141,8 +141,8 @@ class TestPosts(Base):
             common_validations.validate_response_time(response, 1.0)
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while searching post by body positive {ae}")
+            pytest.fail(f"Test Failed while searching post by body positive {ae}")
 
     @pytest.mark.positive
     def test_search_post_by_user_id_positive(self):
@@ -163,8 +163,8 @@ class TestPosts(Base):
             common_validations.validate_response_time(response, 1.0)
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while searching post by user_id positive {ae}")
+            pytest.fail(f"Test Failed while searching post by user_id positive {ae}")
 
     @pytest.mark.positive
     def test_pagination_positive(self):
@@ -186,8 +186,8 @@ class TestPosts(Base):
             common_validations.validate_response_time(response, 1.0)
             common_validations.validate_multiple_object_schema(data, expected_schema)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed during pagination positive {ae}")
+            pytest.fail(f"Test Failed during pagination positive {ae}")
 
     @pytest.mark.positive
     def test_update_post_positive(self, get_create_post_data):
@@ -214,8 +214,8 @@ class TestPosts(Base):
             posts_validations.validate_post_response_body(post_update_data, data)
             logs.info("validated updated body response")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while updating post positive {ae}")
+            pytest.fail(f"Test Failed while updating post positive {ae}")
 
     @pytest.mark.positive
     def test_delete_post_positive(self):
@@ -230,8 +230,8 @@ class TestPosts(Base):
             common_validations.validate_auth_token(response, access_token)
             common_validations.validate_response_time(response, 1.0)
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed while deleting post positive {ae}")
+            pytest.fail(f"Test Failed while deleting post positive {ae}")
 
     # Negative Tests
 
@@ -250,7 +250,8 @@ class TestPosts(Base):
             common_validations.validate_unauthenticated_user_message(response)
             logs.info("[for unauthenticated user] Expected status code and messages are returned")
         except AssertionError as ae:
-            raise ae
+            logs.error(f"Test Failed for creating new post negative[Unauthenticated user] {ae}")
+            pytest.fail(f"Test Failed for creating new post negative[Unauthenticated user] {ae}")
 
         # sending blank data validation
         try:
@@ -264,8 +265,8 @@ class TestPosts(Base):
             data = response.json()
             posts_validations.validate_sending_blank_data(data)
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating new post negative[Blank data] {ae}")
+            pytest.fail(f"Test Failed for creating new post negative[Blank data] {ae}")
 
         # non-existent user_id [string, special characters]
         try:
@@ -280,8 +281,8 @@ class TestPosts(Base):
             data = response.json()
             posts_validations.validate_sending_blank_data(data)
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating new post negative[non-existent user] {ae}")
+            pytest.fail(f"Test Failed for creating new post negative[non-existent user] {ae}")
 
     @pytest.mark.negative
     @pytest.mark.parametrize('invalid_post_id', [-123, "%$#@!", " "])
@@ -293,8 +294,8 @@ class TestPosts(Base):
             common_validations.validate_resource_not_found_message(response)
             logs.info(f"[for invalid post_id {invalid_post_id}] Expected status code and messages are returned ")
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for getting post by id negative{ae}")
+            pytest.fail(f"Test Failed for getting post by id negative{ae}")
 
     @pytest.mark.negative
     def test_search_post_by_title_negative(self):
@@ -324,8 +325,8 @@ class TestPosts(Base):
             if response.status_code == 429:
                 logs.warning("Retrying due to status code 429 Too many requests")
                 return 429  # This triggers a retry for status code 429
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed during pagination negative{ae}")
+            pytest.fail(f"Test Failed during pagination negative{ae}")
 
     @pytest.mark.negative
     def test_update_post_negative(self):
@@ -344,8 +345,8 @@ class TestPosts(Base):
             common_validations.validate_unauthenticated_user_message(response)
             logs.info("[for updating post with unauthenticated user] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed:  {ae}")
-            raise ae
+            logs.error(f"Test Failed for creating new post negative[Unautneticated user] {ae}")
+            pytest.fail(f"Test Failed for creating new post negative[Unautneticated user] {ae}")
 
         # sending blank data validation
         try:
@@ -360,8 +361,8 @@ class TestPosts(Base):
             posts_validations.validate_sending_blank_data(data)
             logs.info("[for updating with blank data] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for updating post negative[Blank data] {ae}")
+            pytest.fail(f"Test Failed for updating post negative[Blank data] {ae}")
 
         # non-existent user_id [string, special characters]
         try:
@@ -376,7 +377,8 @@ class TestPosts(Base):
             posts_validations.validate_sending_blank_data(data)
             logs.info(f"[for updating post with invalid user_id] Expected status code and messages are returned")
         except AssertionError as ae:
-            raise ae
+            logs.error(f"Test Failed for creating new post negative[non-existent user] {ae}")
+            pytest.fail(f"Test Failed for creating new post negative[non-existent user] {ae}")
 
     @pytest.mark.negative
     @pytest.mark.parametrize('invalid_data', [-123, "!@#$"])
@@ -391,8 +393,8 @@ class TestPosts(Base):
             common_validations.validate_unauthenticated_user_message(response)
             logs.info("[for deleting post with unauthenticated user] Expected status code and messages are returned")
         except AssertionError as ae:
-            logs.error(f"Test Failed: {ae}")
-            raise ae
+            logs.error(f"Test Failed for deleting post negative[Unautneticated user] {ae}")
+            pytest.fail(f"Test Failed for deleting post negative[Unautneticated user] {ae}")
 
         # invalid user id
         try:
@@ -401,4 +403,5 @@ class TestPosts(Base):
             common_validations.validate_resource_not_found_message(response)
             logs.info("[for deleting post with invalid user_id] Expected status code and messages are returned")
         except AssertionError as ae:
-            raise ae
+            logs.error(f"Test Failed for creating new post negative[Invalid user] {ae}")
+            pytest.fail(f"Test Failed for creating new post negative[Invalid user] {ae}")
