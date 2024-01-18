@@ -1,1 +1,0 @@
-[32mINFO    [0m test_get_all_users_positive:test_users.py:127 getting all the user successfully: status 200

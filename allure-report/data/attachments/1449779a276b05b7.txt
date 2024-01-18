@@ -1,2 +1,0 @@
-[32mINFO    [0m test_search_user_pagination_positive:test_users.py:195 searched using pagination parameters page 3 and per page 5 successfully: status 200
-[32mINFO    [0m test_search_user_pagination_positive:test_users.py:197 validated page and its returned items length.

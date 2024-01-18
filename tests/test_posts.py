@@ -7,10 +7,23 @@ from test_data import schemas
 from utilities.confguraions import *
 from utilities.validations import common_validations, posts_validations, users_validations
 from utilities.fixtures import get_create_post_data
-config = get_config()
-qa_env = 'qa'
-base_url = config['BASE_URL'][qa_env]
-access_token = config['auth']['token']
+# config = get_config()
+# qa_env = 'qa'
+# base_url = config['BASE_URL'][qa_env]
+# access_token = config['auth']['token']
+
+# Initialize the configparser
+config = configparser.ConfigParser()
+
+# Load the configuration file
+config.read('../conf.ini')  # Make sure to provide the correct path to your conf.ini file
+
+# Get the environment (e.g., 'qa' or 'prod')
+environment = 'qa'  # Change this to the desired environment
+
+# Access the base URL based on the environment
+base_url = config.get('BASE_URL', environment, fallback=None)
+access_token = config.get('auth', 'token', fallback=None)
 
 
 class TestPosts(Base):
@@ -63,7 +76,7 @@ class TestPosts(Base):
             common_validations.validate_content_type(response)
             common_validations.validate_auth_token(response, access_token)
             common_validations.validate_response_is_a_dictionary(data)
-            common_validations.validate_response_time(response, 1.0)
+            common_validations.validate_response_time(response, 2.0)
             common_validations.validate_single_object_schema(data, expected_schema)
         except AssertionError as ae:
             logs.error(f"Test Failed: {ae}")

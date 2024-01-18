@@ -1,2 +1,0 @@
-[32mINFO    [0m test_delete_post_negative:test_posts.py:379 [for deleting post with unauthenticated user] Expected status code and messages are returned
-[32mINFO    [0m test_delete_post_negative:test_posts.py:389 [for deleting post with invalid user_id] Expected status code and messages are returned

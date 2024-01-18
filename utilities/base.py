@@ -6,10 +6,23 @@ from utilities.confguraions import *
 from utilities import urls
 import requests
 
-config = get_config()
-qa_env = 'qa'
-base_url = config['BASE_URL'][qa_env]
-access_token = config['auth']['token']
+# config = get_config()
+# qa_env = 'qa'
+# base_url = config['BASE_URL'][qa_env]
+# access_token = config['auth']['token']
+
+# Initialize the configparser
+config = configparser.ConfigParser()
+
+# Load the configuration file
+config.read('../conf.ini')  # Make sure to provide the correct path to your conf.ini file
+
+# Get the environment (e.g., 'qa' or 'prod')
+environment = 'qa'  # Change this to the desired environment
+
+# Access the base URL based on the environment
+base_url = config.get('BASE_URL', environment, fallback=None)
+access_token = config.get('auth', 'token', fallback=None)
 
 
 class Base:

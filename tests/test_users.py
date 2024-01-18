@@ -10,10 +10,25 @@ from utilities.fixtures import get_create_user_data
 from utilities.validations import users_validations, common_validations
 
 
-config = get_config()
-qa_url = 'qa'
-base_url = config['BASE_URL'][qa_url]
-access_token = config['auth']['token']
+# config = get_config()
+# qa_url = 'qa'
+# base_url = config['BASE_URL'][qa_url]
+# access_token = config['auth']['token']
+
+# Initialize the configparser
+config = configparser.ConfigParser()
+
+# Load the configuration file
+config.read('../conf.ini')  # Make sure to provide the correct path to your conf.ini file
+
+# Get the environment (e.g., 'qa' or 'prod')
+environment = 'qa'  # Change this to the desired environment
+
+# Access the base URL based on the environment
+base_url = config.get('BASE_URL', environment, fallback=None)
+access_token = config.get('auth', 'token', fallback=None)
+
+
 
 
 class TestUsers(Base):

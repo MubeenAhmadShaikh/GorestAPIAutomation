@@ -1,2 +1,0 @@
-[32mINFO    [0m test_create_new_post_negative:test_posts.py:238 [for unauthenticated user] Expected status code and messages are returned
-[32mINFO    [0m test_create_new_post_negative:test_posts.py:266 [for non-existent user_id 1] Expected status code and messages are returned

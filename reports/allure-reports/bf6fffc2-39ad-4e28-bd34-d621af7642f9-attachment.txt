@@ -1,3 +1,0 @@
-[32mINFO    [0m test_update_post_negative:test_posts.py:332 [for updating post with unauthenticated user] Expected status code and messages are returned
-[32mINFO    [0m test_update_post_negative:test_posts.py:348 [for updating with blank data] Expected status code and messages are returned
-[32mINFO    [0m test_update_post_negative:test_posts.py:364 [for updating post with invalid user_id] Expected status code and messages are returned

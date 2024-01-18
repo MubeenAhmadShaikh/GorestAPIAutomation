@@ -3,10 +3,11 @@ import os
 import openpyxl as openpyxl
 import requests
 # current script's directory
-script_dir = os.path.dirname(os.path.realpath(__file__))
+# script_dir = os.path.dirname(os.path.realpath(__file__))
 # absolute path to file
-excel_file_path = os.path.join(script_dir, 'data.xlsx')
-work_book = openpyxl.load_workbook(excel_file_path)
+# excel_file_path = os.path.join(script_dir, 'data.xlsx')
+file_path = os.path.join(os.path.abspath(os.path.join(os.curdir, '..')), 'test_data','data.xlsx')
+work_book = openpyxl.load_workbook(file_path)
 
 
 def get_create_post_data_from_excel():

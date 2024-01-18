@@ -1,4 +1,0 @@
-[32mINFO    [0m test_create_new_user_negative:test_users.py:292 [for unauthenticated user] Expected status code and messages are returned
-[32mINFO    [0m test_create_new_user_negative:test_users.py:309 [for blank data] Expected status code and messages are returned 
-[32mINFO    [0m test_create_new_user_negative:test_users.py:328 [for duplicate email] Expected status code and messages are returned 
-[32mINFO    [0m test_create_new_user_negative:test_users.py:345 [for invalid gender and email] Expected status code and messages are returned

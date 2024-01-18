@@ -1,2 +1,0 @@
-[32mINFO    [0m test_delete_user_negative:test_users.py:491 [for deleting unauthenticated user] Expected status code and messages are returned
-[32mINFO    [0m test_delete_user_negative:test_users.py:502 [for deleting with invalid user_id] Expected status code and messages are returned

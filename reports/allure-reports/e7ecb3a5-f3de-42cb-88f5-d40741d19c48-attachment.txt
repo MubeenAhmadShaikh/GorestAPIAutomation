@@ -1,2 +1,0 @@
-[32mINFO    [0m test_search_users_by_email_positive:test_users.py:172 searched user by email kan successfully: status 200
-[32mINFO    [0m test_search_users_by_email_positive:test_users.py:174 validated searched user successfully

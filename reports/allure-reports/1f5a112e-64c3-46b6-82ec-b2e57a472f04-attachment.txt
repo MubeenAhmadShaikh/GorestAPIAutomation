@@ -1,2 +1,0 @@
-[32mINFO    [0m test_search_users_by_name_positive:test_users.py:148 searched user by name kan successfully: status 200
-[32mINFO    [0m test_search_users_by_name_positive:test_users.py:150 validated searched user successfully

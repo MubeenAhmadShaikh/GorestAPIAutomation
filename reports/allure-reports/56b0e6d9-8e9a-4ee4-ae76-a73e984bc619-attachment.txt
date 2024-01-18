@@ -1,1 +1,0 @@
-[32mINFO    [0m test_delete_post_positive:test_posts.py:215 deleted existing post successfully: status 204
